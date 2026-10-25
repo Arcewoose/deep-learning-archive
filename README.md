@@ -1,4 +1,4 @@
-# Applied Deep Learning & Computer Vision Engineering Repository
+# Data Science & Deep Learning Study Archive
 
 This repository contains research implementations, benchmark experiments, and domain-specific engineering projects across Computer Vision, Deep Tabular Learning, NLP, and Recommendation Systems.
 
