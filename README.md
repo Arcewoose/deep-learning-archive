@@ -34,13 +34,14 @@ This repository contains research implementations, benchmark experiments, and do
 
 ## Featured Projects
 
-### 1. [Satellite Multispectral Volcanic Eruption Detection](projects/module_01_volcano_classification/)
-- **Objective**: On-board automated eruption detection from multispectral satellite imagery under extreme class imbalance.
-- **Key Challenges**: Imbalanced dataset (260 eruption vs. 1,500 non-eruption instances).
+### 1. [Brain Tumor MRI Classification with ResNet50 Transfer Learning](projects/brain_tumor_detection_resnet/)
+- **Objective**: Automated detection of brain tumors from T1/T2-weighted brain MRI scan images.
+- **Dataset**: Clinical MRI scans categorized into binary classes (Tumor Yes / No).
 - **Methods**:
-  - Custom 7-layer CNN backbone combined with Global Average Pooling (GAP) to reduce parameter overhead.
-  - Class-weighted oversampling and augmentation pipeline (`ai4eo.preprocessing`).
-- **Results**: Achieved **85.0% classification accuracy** on test set with 0.5 decision thresholding.
+  - ImageNet pre-trained **ResNet50** backbone utilized as a frozen feature extractor (`trainable=False`).
+  - Custom classification top-head comprising `Flatten()`, `Dropout(0.5)`, and `Dense(1, sigmoid)`.
+  - Input resolution standardization to $(224, 224, 3)$ with data augmentation and split-folders stratification.
+- **Results**: Achieved peak **validation accuracy of 91.67%** during transfer learning convergence.
 
 ### 2. [Deep Neural Architectures for Tabular Classification](projects/module_02_diabetes_classification/)
 - **Objective**: Surpass tree-based baseline (XGBoost) on tabular benchmark data (Pima Indians Diabetes dataset).
@@ -56,8 +57,9 @@ This repository contains research implementations, benchmark experiments, and do
 
 ```text
 ├── projects/
-│   ├── module_01_volcano_classification/   # Satellite multispectral CV project
-│   └── module_02_diabetes_classification/  # Tabular deep learning & optimization
+│   ├── brain_tumor_detection_resnet/       # Medical MRI classification via ResNet50
+│   ├── module_02_diabetes_classification/  # Tabular deep learning & optimization
+│   └── module_01_volcano_classification/   # Satellite multispectral CV implementation
 ├── notebooks/
 │   ├── cv/                                 # YOLO detection, transfer learning
 │   ├── nlp/                                # BERT sentiment & comment analysis
@@ -70,6 +72,7 @@ This repository contains research implementations, benchmark experiments, and do
 
 ## Core Competencies & Toolstack
 
-- **Computer Vision**: CNN backbones, Object Detection (YOLO), Satellite/Multispectral preprocessing, Transfer Learning.
+- **Computer Vision**: CNN backbones (ResNet50), Object Detection (YOLO), Medical/Satellite Image Preprocessing, Transfer Learning.
 - **Deep Tabular Modeling**: Feature embedding, tensor mapping, hyperparameter optimization.
 - **NLP & RecSys**: BERT fine-tuning, Tokenization, Latent Factor SVD recommendation.
+- **Tech Stack**: Python, PyTorch, TensorFlow/Keras, Scikit-Learn, XGBoost, OpenCV, Pandas, NumPy.
