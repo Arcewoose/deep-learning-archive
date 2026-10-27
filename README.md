@@ -21,7 +21,7 @@ This repository contains research implementations, benchmark experiments, and do
 
 <div align="center">
   <a href="https://sesac.seoul.kr/">
-    <img src="https://sesac.seoul.kr/static/img/sub/img_pursue_01.png" width="600" alt="Seoul Software Academy (SeSAC)" />
+    <img src="https://sesac.seoul.kr/static/img/sub/img_pursue_01.png" width="400" alt="Seoul Software Academy (SeSAC)" />
   </a>
   <p><b>Seoul Software Academy (SeSAC / 서울청년취업사관학교)</b></p>
 </div>
